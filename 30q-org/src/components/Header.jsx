@@ -2,6 +2,7 @@ import {
   AppBar, IconButton, Toolbar, Typography, Box, Grow,
 } from '@mui/material';
 import React, { useEffect, useState } from 'react';
+import { Link as Scroll } from 'react-scroll';
 import MenuIcon from '@mui/icons-material/Menu';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
@@ -65,9 +66,12 @@ function Header() {
             <br />
             <span style={classes.colorText}> E-SPORTS</span>
           </Typography>
-          <IconButton>
-            <ExpandMoreIcon sx={classes.goDown} />
-          </IconButton>
+          <Scroll to="about-us" smooth>
+
+            <IconButton>
+              <ExpandMoreIcon sx={classes.goDown} />
+            </IconButton>
+          </Scroll>
         </Box>
       </Grow>
     </Box>
